@@ -21,8 +21,15 @@ constructor (props){
 }
 
   render(){
+    if (this.state.error && !this.state.lat){
+      return <div> error : {this.state.error} </div>
+    }
+    if (!this.state.error && this.state.lat) {
+      return <div> Latitude : {this.state.lat} </div>
 
-      return <div> Lattitude : {this.state.lat} </div>
+    }
+
+    return <div > Loading .. </div>
 
   } ;
 
