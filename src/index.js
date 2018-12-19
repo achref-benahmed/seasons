@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 
 
@@ -30,7 +31,7 @@ componentDidMount(){
 
     }
 
-    return <div > Loading .. </div>
+    return <div > <Spinner /> </div>
 
   } ;
 
