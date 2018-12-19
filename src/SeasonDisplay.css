@@ -1,0 +1,21 @@
+.i-left {
+
+  position : absolute;
+  top : 5%;
+  left : 5%;
+}
+
+.i-right {
+
+  position : absolute;
+  bottom : 5%;
+  right : 5%;
+}
+
+.season-display {
+
+  display : flex;
+  justify-content : center;
+  align-items: center;
+  height :100vh;
+}
