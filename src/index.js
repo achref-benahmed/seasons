@@ -22,16 +22,25 @@ componentDidMount(){
 
 }
 
+Content () {
+
+  if (this.state.error && !this.state.lat){
+    return <div> error : {this.state.error} </div>
+  }
+  if (!this.state.error && this.state.lat) {
+    return <SeasonDisplay lat = {this.state.lat} />
+
+  }
+
+  return <div > <Spinner message="Please accept loaction request."/> </div>
+}
+
   render(){
-    if (this.state.error && !this.state.lat){
-      return <div> error : {this.state.error} </div>
-    }
-    if (!this.state.error && this.state.lat) {
-      return <SeasonDisplay lat = {this.state.lat} />
-
-    }
-
-    return <div > <Spinner message="Please accept loaction request."/> </div>
+      return (
+        <div>
+          {this.Content()}
+        </div>
+      )
 
   } ;
 
