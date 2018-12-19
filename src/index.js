@@ -31,7 +31,7 @@ componentDidMount(){
 
     }
 
-    return <div > <Spinner /> </div>
+    return <div > <Spinner message="Please accept loaction request."/> </div>
 
   } ;
 
